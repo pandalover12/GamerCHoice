@@ -24,4 +24,5 @@ public class MoveingBlob : MonoBehaviour {
             transform.Translate(0, 0, 0.05f);
         }
     }
+ 
 }

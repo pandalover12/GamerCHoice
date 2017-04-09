@@ -32,10 +32,21 @@ public class ThemagicCarpet : MonoBehaviour {
             Player.transform.position = Destination.transform.position;
             
         }
-        if (Player.transform.position.y < -4&&Heath==0)
+        if (Heath<=0)
         {
             SceneManager.LoadScene(LoadbyLevl);
         }
 
+    }
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Atk1"|| other.gameObject.tag == "Atk2")
+        {
+            Heath--;
+        }
+        if(other.gameObject.tag=="Enemy")
+        {
+            Heath--;
+        }
     }
 }
