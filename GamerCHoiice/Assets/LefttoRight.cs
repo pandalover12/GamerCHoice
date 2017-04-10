@@ -19,9 +19,9 @@ public class LefttoRight : MonoBehaviour {
         }
         if (left == false)
         {
-            transform.Translate(-0.07f, 0, 0);
+            transform.Translate(-0.007f, 0, 0);
         }
         if(left==true)
-            transform.Translate(0.07f, 0, 0);
+            transform.Translate(0.007f, 0, 0);
     }
 }

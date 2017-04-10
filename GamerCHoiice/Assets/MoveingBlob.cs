@@ -17,11 +17,11 @@ public class MoveingBlob : MonoBehaviour {
             move = true;
         if(move==true)
         {
-            transform.Translate(0, 0, -0.05f);
+            transform.Translate(0, 0, -0.005f);
         }
         if (move == false)
         {
-            transform.Translate(0, 0, 0.05f);
+            transform.Translate(0, 0, 0.005f);
         }
     }
  

@@ -41,16 +41,23 @@ public class ThemagicCarpet : MonoBehaviour {
         transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles.y, rotating, rotating);
         if (Input.GetKeyDown("space")&&Speedy>0)
         {
+           
+            PlayerPrefs.SetFloat("Boost", Speedy);
+            BoostLeft.text = "Boost" + Speedy;
+
             dragon = true;
             dragon3 = true;
         }
-        if (dragon == true&&Speedy+400>=fakespeedy)
+        if (dragon == true&&Speedy+2000>=fakespeedy)
         {
             while(dragon3==true)
             {
+                
+
                 fakespeedy = Speedy;
                 dragon3 = false;
             }
+            PlayerPrefs.SetFloat("Boost", Speedy);
 
             dragon2 = true;
             
@@ -58,16 +65,27 @@ public class ThemagicCarpet : MonoBehaviour {
         }
         if(dragon2==true)
         {
-           
+            PlayerPrefs.SetFloat("Boost", Speedy);
+
             Speedy--;
+            PlayerPrefs.SetFloat("Boost", Speedy);
+
             Speedy--;
+            PlayerPrefs.SetFloat("Boost", Speedy);
+
             Speedy--;
+            PlayerPrefs.SetFloat("Boost", Speedy);
+
             Speedy--;
-            
+            PlayerPrefs.SetFloat("Boost", Speedy);
+
+
         }
 
-        if (Speedy +400 <= fakespeedy || Input.GetKeyDown(KeyCode.A))
+        if (Speedy +2000 <= fakespeedy || Input.GetKeyDown(KeyCode.A))
         {
+          
+
             speed = 4;
             dragon2 = false;
             dragon=false;
@@ -117,7 +135,7 @@ public class ThemagicCarpet : MonoBehaviour {
         }
         if (other.gameObject.tag == "SpeedBoost" )
         {
-            Speedy+=1000;
+            Speedy+=6000;
             PlayerPrefs.SetFloat("Boost", Speedy);
           
         } 

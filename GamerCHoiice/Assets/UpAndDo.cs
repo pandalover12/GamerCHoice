@@ -22,11 +22,11 @@ public class UpAndDo : MonoBehaviour {
         }
         if (down == true)
         {
-            transform.Translate(0, -0.05f, 0);
+            transform.Translate(0, -0.005f, 0);
         }
         if (down == false)
         {
-            transform.Translate(0, 0.05f, 0);
+            transform.Translate(0, 0.005f, 0);
         }
 	}
 }

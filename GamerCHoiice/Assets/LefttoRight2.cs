@@ -12,9 +12,9 @@ public class LefttoRight2 : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         if (transform.position.z > -70&&move==true)
-            transform.Translate(-0.024f, 0, 0.02f);
+            transform.Translate(-0.0024f, 0, 0.002f);
         if(transform.position.z<-44&&move==false)
-            transform.Translate(0.024f, 0, -0.02f);
+            transform.Translate(0.0024f, 0, -0.002f);
     }
     void OnTriggerEnter(Collider other)
     {
