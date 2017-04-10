@@ -125,12 +125,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 4
   Heath: 5
-  Speedy: 5
+  Speedy: 1000
   Destination: {fileID: 884686462}
   Player: {fileID: 39098123}
   LoadbyLevl: Scene1
   HeathText: {fileID: 372798800}
   SpeedTimer: {fileID: 1817376322}
+  fakespeedy: 0
 --- !u!23 &39098125
 MeshRenderer:
   m_ObjectHideFlags: 0
