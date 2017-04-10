@@ -22,13 +22,15 @@ public class ThemagicCarpet : MonoBehaviour {
     
 	// Use this for initialization
 	void Start () {
+        
+     Heath  = PlayerPrefs.GetInt("Heath", Heath);
         HeathText.text = "Heath" + Heath;
         speed = 4;
 	}
 
     // Update is called once per frame
     void Update() {
-        
+    Heath  =  PlayerPrefs.GetInt("Heath", Heath);
         HeathText.text = "Heath" + Heath;
         transform.Translate(speed * Input.GetAxis("Left") * Time.deltaTime, 0f, speed * Input.GetAxis("Down") * Time.deltaTime);
         transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles.y, rotating, rotating);
@@ -67,16 +69,25 @@ public class ThemagicCarpet : MonoBehaviour {
         }
         if (Player.transform.position.y < -4 && Heath != 0)
         {
-
+           
             Heath--;
+            PlayerPrefs.SetInt("Heath", Heath);
         }
         if (Player.transform.position.y < -4 && Heath != 0)
         {
             Player.transform.position = Destination.transform.position;
 
         }
+        if (Input.GetKey("escape"))
+        {
+            Heath = 5;
+            PlayerPrefs.SetInt("Heath", Heath);
+            Application.Quit();
+        }
         if (Heath <= 0)
         {
+            Heath = 5;
+            PlayerPrefs.SetInt("Heath", Heath);
             SceneManager.LoadScene(LoadbyLevl);
         }
     
@@ -85,11 +96,15 @@ public class ThemagicCarpet : MonoBehaviour {
     {
         if (other.gameObject.tag == "Atk1"|| other.gameObject.tag == "Atk2")
         {
+           
             Heath--;
+            PlayerPrefs.SetInt("Heath", Heath);
         }
         if(other.gameObject.tag=="Enemy")
         {
+            
             Heath--;
+            PlayerPrefs.SetInt("Heath", Heath);
         }
         if (other.gameObject.tag == "SpeedBoost" )
         {

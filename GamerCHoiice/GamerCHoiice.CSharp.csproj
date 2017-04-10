@@ -82,6 +82,7 @@
     <Compile Include="Assets\MoveingBlob.cs" />
     <Compile Include="Assets\Moveingblock.cs" />
     <Compile Include="Assets\Rotatings.cs" />
+    <Compile Include="Assets\SceneChanger.cs" />
     <Compile Include="Assets\Scripts\CamGirl.cs" />
     <Compile Include="Assets\Scripts\TextDisplay.cs" />
     <Compile Include="Assets\Scripts\ThemagicCarpet.cs" />
