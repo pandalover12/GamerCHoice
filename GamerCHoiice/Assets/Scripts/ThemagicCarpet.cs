@@ -17,21 +17,26 @@ public class ThemagicCarpet : MonoBehaviour {
     public GameObject Player;
     public string LoadbyLevl;
     public Text HeathText;
-    public Text SpeedTimer;
+    public Text BoostLeft;
     public float fakespeedy;
     
 	// Use this for initialization
 	void Start () {
-        
+     Speedy =PlayerPrefs.GetFloat("Boost", Speedy);
      Heath  = PlayerPrefs.GetInt("Heath", Heath);
+        BoostLeft.text = "Boost" + Speedy;
         HeathText.text = "Heath" + Heath;
         speed = 4;
 	}
 
     // Update is called once per frame
     void Update() {
-    Heath  =  PlayerPrefs.GetInt("Heath", Heath);
+
+        Speedy = PlayerPrefs.GetFloat("Boost", Speedy);
+        Heath  =  PlayerPrefs.GetInt("Heath", Heath);
+        
         HeathText.text = "Heath" + Heath;
+        BoostLeft.text = "Boost" + Speedy;
         transform.Translate(speed * Input.GetAxis("Left") * Time.deltaTime, 0f, speed * Input.GetAxis("Down") * Time.deltaTime);
         transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles.y, rotating, rotating);
         if (Input.GetKeyDown("space")&&Speedy>0)
@@ -80,14 +85,18 @@ public class ThemagicCarpet : MonoBehaviour {
         }
         if (Input.GetKey("escape"))
         {
+            Speedy = 0;
             Heath = 5;
             PlayerPrefs.SetInt("Heath", Heath);
+            PlayerPrefs.SetFloat("Boost", Speedy);
             Application.Quit();
         }
         if (Heath <= 0)
         {
+            Speedy = 0;
             Heath = 5;
             PlayerPrefs.SetInt("Heath", Heath);
+            PlayerPrefs.SetFloat("Boost", Speedy);
             SceneManager.LoadScene(LoadbyLevl);
         }
     
@@ -109,6 +118,7 @@ public class ThemagicCarpet : MonoBehaviour {
         if (other.gameObject.tag == "SpeedBoost" )
         {
             Speedy+=1000;
+            PlayerPrefs.SetFloat("Boost", Speedy);
           
         } 
       
