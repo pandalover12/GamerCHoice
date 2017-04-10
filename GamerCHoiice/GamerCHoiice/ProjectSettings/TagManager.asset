@@ -7,6 +7,7 @@ TagManager:
   - Atk1
   - Atk2
   - Enemy
+  - SpeedBoost
   layers:
   - Default
   - TransparentFX

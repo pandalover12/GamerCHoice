@@ -9,7 +9,7 @@ public class ThemagicCarpet : MonoBehaviour {
     float counter;
     float rotating = 0;
     public int Heath = 5;
-    public float Speedy = 1000;
+    public float Speedy = 0;
     bool dragon;
     bool dragon2;
     bool dragon3 = true;
@@ -32,7 +32,7 @@ public class ThemagicCarpet : MonoBehaviour {
         HeathText.text = "Heath" + Heath;
         transform.Translate(speed * Input.GetAxis("Left") * Time.deltaTime, 0f, speed * Input.GetAxis("Down") * Time.deltaTime);
         transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles.y, rotating, rotating);
-        if (Input.GetKeyDown("space"))
+        if (Input.GetKeyDown("space")&&Speedy>0)
         {
             dragon = true;
             dragon3 = true;
@@ -93,7 +93,7 @@ public class ThemagicCarpet : MonoBehaviour {
         }
         if (other.gameObject.tag == "SpeedBoost" )
         {
-            Speedy+=150;
+            Speedy+=1000;
           
         } 
       
