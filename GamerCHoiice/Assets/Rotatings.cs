@@ -15,7 +15,7 @@ public class Rotatings : MonoBehaviour {
 	void Update () {
         mewo = cat.GetDragon();
         
-        transform.Rotate(0.04f,0, 0);
+        transform.Rotate(0.19f,0, 0);
 	}
     void OnTriggerEnter(Collider other)
     {
