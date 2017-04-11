@@ -17,20 +17,14 @@ Platform assembly: C:\Users\panda12\Documents\GitHub\GamerCHoice\GamerCHoiice\Ru
 Loading C:\Users\panda12\Documents\GitHub\GamerCHoice\GamerCHoiice\Run_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
 Platform assembly: C:\Users\panda12\Documents\GitHub\GamerCHoice\GamerCHoiice\Run_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll (this message is harmless)
 Loading C:\Users\panda12\Documents\GitHub\GamerCHoice\GamerCHoiice\Run_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll into Unity Child Domain
-- Completed reload, in  0.175 seconds
+- Completed reload, in  0.158 seconds
 Platform assembly: C:\Users\panda12\Documents\GitHub\GamerCHoice\GamerCHoiice\Run_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: C:\Users\panda12\Documents\GitHub\GamerCHoice\GamerCHoiice\Run_Data\Managed\System.dll (this message is harmless)
 desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
-UnloadTime: 1.228247 ms
+UnloadTime: 4.085334 ms
 Setting up 2 worker threads for Enlighten.
-  Thread -> id: 1a70 -> priority: 1 
-  Thread -> id: 34bc -> priority: 1 
-Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 11.666966 ms
-
-Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 307.
-Total: 0.386370 ms (FindLiveObjects: 0.060839 ms CreateObjectMapping: 0.031209 ms MarkObjects: 0.280493 ms  DeleteObjects: 0.013037 ms)
-
+  Thread -> id: 35b0 -> priority: 1 
+  Thread -> id: 2178 -> priority: 1 
