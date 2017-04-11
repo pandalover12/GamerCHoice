@@ -6,15 +6,15 @@ public class LefttoRight2 : MonoBehaviour {
     bool move;
 	// Use this for initialization
 	void Start () {
-		
+       // move = true;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-        if (transform.position.z > -70&&move==true)
-            transform.Translate(-0.0024f, 0, 0.002f);
+        if (transform.position.x > -35  &&move==true)
+            transform.Translate(-0.01f, 0, 0.09f);
         if(transform.position.z<-44&&move==false)
-            transform.Translate(0.0024f, 0, -0.002f);
+            transform.Translate(0.01f, 0, -0.09f);
     }
     void OnTriggerEnter(Collider other)
     {

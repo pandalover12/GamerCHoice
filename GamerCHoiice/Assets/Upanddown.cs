@@ -17,9 +17,9 @@ public class Upanddown : MonoBehaviour {
         if (transform.position.y < 0)
             up = true;
         if(up==false)
-        transform.Translate(0, -0.001f, 0);
+        transform.Translate(0, -0.007f, 0);
         if(up == true)
-            transform.Translate(0, 0.003f, 0);
+            transform.Translate(0, 0.007f, 0);
     }
     void OnTriggerEnter(Collider other)
     {

@@ -31,7 +31,12 @@ public class ThemagicCarpet : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
-
+        if(Speedy<=0)
+        {
+            Speedy = 0;
+            PlayerPrefs.SetFloat("Boost", Speedy);
+            speed = 4;
+        }
         Speedy = PlayerPrefs.GetFloat("Boost", Speedy);
         Heath  =  PlayerPrefs.GetInt("Heath", Heath);
         
@@ -48,7 +53,7 @@ public class ThemagicCarpet : MonoBehaviour {
             dragon = true;
             dragon3 = true;
         }
-        if (dragon == true&&Speedy+2000>=fakespeedy)
+        if (dragon == true&&Speedy+500>=fakespeedy)
         {
             while(dragon3==true)
             {
@@ -82,7 +87,7 @@ public class ThemagicCarpet : MonoBehaviour {
 
         }
 
-        if (Speedy +2000 <= fakespeedy || Input.GetKeyDown(KeyCode.A))
+        if (Speedy +500 <= fakespeedy || Input.GetKeyDown(KeyCode.A))
         {
           
 
@@ -135,7 +140,7 @@ public class ThemagicCarpet : MonoBehaviour {
         }
         if (other.gameObject.tag == "SpeedBoost" )
         {
-            Speedy+=6000;
+            Speedy+=2000;
             PlayerPrefs.SetFloat("Boost", Speedy);
           
         } 
