@@ -10,7 +10,7 @@ public class LefttoRight : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void FixedUpdate () {
         if (transform.position.x >= 5)
             left = false;
         if(transform.position.x<=-1.15f)

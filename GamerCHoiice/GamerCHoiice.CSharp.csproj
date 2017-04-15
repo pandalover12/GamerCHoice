@@ -77,8 +77,10 @@
   <ItemGroup>
     <Compile Include="Assets\Camgirl2.cs" />
     <Compile Include="Assets\FakeROllingball.cs" />
+    <Compile Include="Assets\Iamalittleteapot.cs" />
     <Compile Include="Assets\LefttoRight.cs" />
     <Compile Include="Assets\LefttoRight2.cs" />
+    <Compile Include="Assets\Memory.cs" />
     <Compile Include="Assets\MoveingBlob.cs" />
     <Compile Include="Assets\Moveingblock.cs" />
     <Compile Include="Assets\Rotatings.cs" />
@@ -86,6 +88,8 @@
     <Compile Include="Assets\Scripts\CamGirl.cs" />
     <Compile Include="Assets\Scripts\TextDisplay.cs" />
     <Compile Include="Assets\Scripts\ThemagicCarpet.cs" />
+    <Compile Include="Assets\Trickory.cs" />
+    <Compile Include="Assets\Trickory2.cs" />
     <Compile Include="Assets\UpAndDo.cs" />
     <Compile Include="Assets\Upanddown.cs" />
     <Compile Include="Assets\dispear.cs" />

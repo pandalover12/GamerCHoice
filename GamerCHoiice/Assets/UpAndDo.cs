@@ -10,7 +10,7 @@ public class UpAndDo : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void FixedUpdate () {
         if(transform.position.y<6)
         {
             down = false;
