@@ -92,6 +92,7 @@
     <Compile Include="Assets\Trickory2.cs" />
     <Compile Include="Assets\UpAndDo.cs" />
     <Compile Include="Assets\Upanddown.cs" />
+    <Compile Include="Assets\badtext.cs" />
     <Compile Include="Assets\dispear.cs" />
     <Compile Include="Assets\invisable.cs" />
     <Compile Include="Assets\rotatingda.cs" />
