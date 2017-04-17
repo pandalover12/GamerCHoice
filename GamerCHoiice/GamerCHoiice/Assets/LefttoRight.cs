@@ -10,7 +10,7 @@ public class LefttoRight : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void FixedUpdate () {
         if (transform.position.x >= 5)
             left = false;
         if(transform.position.x<=-1.15f)
@@ -19,9 +19,9 @@ public class LefttoRight : MonoBehaviour {
         }
         if (left == false)
         {
-            transform.Translate(-0.07f, 0, 0);
+            transform.Translate(-0.03f, 0, 0);
         }
         if(left==true)
-            transform.Translate(0.07f, 0, 0);
+            transform.Translate(0.03f, 0, 0);
     }
 }

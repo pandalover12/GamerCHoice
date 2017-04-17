@@ -10,7 +10,7 @@ public class UpAndDo : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void FixedUpdate () {
         if(transform.position.y<6)
         {
             down = false;
@@ -22,11 +22,11 @@ public class UpAndDo : MonoBehaviour {
         }
         if (down == true)
         {
-            transform.Translate(0, -0.05f, 0);
+            transform.Translate(0, -0.023f, 0);
         }
         if (down == false)
         {
-            transform.Translate(0, 0.05f, 0);
+            transform.Translate(0, 0.023f, 0);
         }
 	}
 }

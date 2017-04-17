@@ -8,6 +8,7 @@ TagManager:
   - Atk2
   - Enemy
   - SpeedBoost
+  - HeathBonus
   layers:
   - Default
   - TransparentFX

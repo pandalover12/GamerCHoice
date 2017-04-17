@@ -17,33 +17,52 @@ public class ThemagicCarpet : MonoBehaviour {
     public GameObject Player;
     public string LoadbyLevl;
     public Text HeathText;
-    public Text SpeedTimer;
+    public Text BoostLeft;
     public float fakespeedy;
     
 	// Use this for initialization
 	void Start () {
+     Speedy =PlayerPrefs.GetFloat("Boost", Speedy);
+     Heath  = PlayerPrefs.GetInt("Heath", Heath);
+        BoostLeft.text = "Boost" + Speedy;
         HeathText.text = "Heath" + Heath;
         speed = 4;
 	}
 
     // Update is called once per frame
     void Update() {
+        if(Speedy<=0)
+        {
+            Speedy = 0;
+            PlayerPrefs.SetFloat("Boost", Speedy);
+            speed = 4;
+        }
+        Speedy = PlayerPrefs.GetFloat("Boost", Speedy);
+        Heath  =  PlayerPrefs.GetInt("Heath", Heath);
         
         HeathText.text = "Heath" + Heath;
+        BoostLeft.text = "Boost" + Speedy;
         transform.Translate(speed * Input.GetAxis("Left") * Time.deltaTime, 0f, speed * Input.GetAxis("Down") * Time.deltaTime);
         transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles.y, rotating, rotating);
         if (Input.GetKeyDown("space")&&Speedy>0)
         {
+           
+            PlayerPrefs.SetFloat("Boost", Speedy);
+            BoostLeft.text = "Boost" + Speedy;
+
             dragon = true;
             dragon3 = true;
         }
-        if (dragon == true&&Speedy+400>=fakespeedy)
+        if (dragon == true&&Speedy+500>=fakespeedy)
         {
             while(dragon3==true)
             {
+                
+
                 fakespeedy = Speedy;
                 dragon3 = false;
             }
+            PlayerPrefs.SetFloat("Boost", Speedy);
 
             dragon2 = true;
             
@@ -51,32 +70,56 @@ public class ThemagicCarpet : MonoBehaviour {
         }
         if(dragon2==true)
         {
-           
+            PlayerPrefs.SetFloat("Boost", Speedy);
+
             Speedy--;
+            PlayerPrefs.SetFloat("Boost", Speedy);
+
             Speedy--;
+            PlayerPrefs.SetFloat("Boost", Speedy);
+
             Speedy--;
+            PlayerPrefs.SetFloat("Boost", Speedy);
+
             Speedy--;
-            
+            PlayerPrefs.SetFloat("Boost", Speedy);
+
+
         }
 
-        if (Speedy +400 <= fakespeedy || Input.GetKeyDown(KeyCode.A))
+        if (Speedy +500 <= fakespeedy || Input.GetKeyDown(KeyCode.A))
         {
+          
+
             speed = 4;
             dragon2 = false;
             dragon=false;
         }
         if (Player.transform.position.y < -4 && Heath != 0)
         {
-
+           
             Heath--;
+            PlayerPrefs.SetInt("Heath", Heath);
         }
         if (Player.transform.position.y < -4 && Heath != 0)
         {
             Player.transform.position = Destination.transform.position;
 
         }
+        if (Input.GetKey("escape"))
+        {
+            Speedy = 0;
+            Heath = 5;
+            PlayerPrefs.SetInt("Heath", Heath);
+            PlayerPrefs.SetFloat("Boost", Speedy);
+            Application.Quit();
+        }
         if (Heath <= 0)
         {
+            Speedy = 0;
+            Heath = 5;
+            PlayerPrefs.SetInt("Heath", Heath);
+            PlayerPrefs.SetFloat("Boost", Speedy);
             SceneManager.LoadScene(LoadbyLevl);
         }
     
@@ -85,17 +128,27 @@ public class ThemagicCarpet : MonoBehaviour {
     {
         if (other.gameObject.tag == "Atk1"|| other.gameObject.tag == "Atk2")
         {
+           
             Heath--;
+            PlayerPrefs.SetInt("Heath", Heath);
         }
         if(other.gameObject.tag=="Enemy")
         {
+            
             Heath--;
+            PlayerPrefs.SetInt("Heath", Heath);
         }
         if (other.gameObject.tag == "SpeedBoost" )
         {
-            Speedy+=1000;
+            Speedy+=2000;
+            PlayerPrefs.SetFloat("Boost", Speedy);
           
-        } 
+        }
+        if (other.gameObject.tag == "HeathBonus")
+        {
+            Heath++;
+            PlayerPrefs.SetInt("Heath", Heath);
+        }
       
     }
     public bool GetDragon()

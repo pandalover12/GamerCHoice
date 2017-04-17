@@ -5,39 +5,66 @@ using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class ThemagicCarpet : MonoBehaviour {
-    float speed = 4;
+    public float speed;
+    float counter;
     float rotating = 0;
     public int Heath = 5;
-    public int Sticky = 0;
-   public bool dragon = false;
-   public float counter = 0;
+    public float Speedy = 0;
+    bool dragon;
+    bool dragon2;
+    bool dragon3 = true;
     public GameObject Destination;
     public GameObject Player;
     public string LoadbyLevl;
     public Text HeathText;
+    public Text SpeedTimer;
+    public float fakespeedy;
     
 	// Use this for initialization
 	void Start () {
         HeathText.text = "Heath" + Heath;
+        speed = 4;
 	}
 
     // Update is called once per frame
     void Update() {
-        if (Input.GetKeyDown(KeyCode.Space))
-             {
-            do
-            {
-                dragon = true;
-                counter += Time.deltaTime;
-            } while (counter <= 5);
-            dragon = false;
-            Sticky--;
-        }
-
-
+        
         HeathText.text = "Heath" + Heath;
         transform.Translate(speed * Input.GetAxis("Left") * Time.deltaTime, 0f, speed * Input.GetAxis("Down") * Time.deltaTime);
         transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles.y, rotating, rotating);
+        if (Input.GetKeyDown("space")&&Speedy>0)
+        {
+            dragon = true;
+            dragon3 = true;
+        }
+        if (dragon == true&&Speedy+400>=fakespeedy)
+        {
+            while(dragon3==true)
+            {
+                fakespeedy = Speedy;
+                dragon3 = false;
+            }
+
+            dragon2 = true;
+            
+            speed = 8;
+        }
+        if(dragon2==true)
+        {
+           
+            Speedy--;
+            Speedy--;
+            Speedy--;
+            Speedy--;
+            
+        }
+
+        if (Speedy +400 <= fakespeedy || Input.GetKeyDown(KeyCode.A))
+        {
+            speed = 4;
+            dragon2 = false;
+            dragon=false;
+        }
         if (Player.transform.position.y < -4 && Heath != 0)
         {
 
@@ -64,9 +91,9 @@ public class ThemagicCarpet : MonoBehaviour {
         {
             Heath--;
         }
-        if (other.gameObject.tag == "Sticky" )
+        if (other.gameObject.tag == "SpeedBoost" )
         {
-            Sticky++;
+            Speedy+=1000;
           
         } 
       
