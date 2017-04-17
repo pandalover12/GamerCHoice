@@ -12,14 +12,14 @@ public class Memory : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        do
+        
         {
-            transform.Translate(0, 0, 0.5f);
-            if(transform.position.z>2)
+            transform.Translate(0, 0, 0.09f);
+            if(transform.position.z>5)
             {
                 transform.position = Destination.transform.position;
             }
 
-        } while (PLayer.transform.position.z < 5);
+        }
 	}
 }
