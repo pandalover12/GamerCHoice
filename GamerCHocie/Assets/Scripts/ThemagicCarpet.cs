@@ -6,22 +6,28 @@ using UnityEngine;
 
 public class ThemagicCarpet : MonoBehaviour {
     public float speed;
-    float counter;
+    int counter;
     float rotating = 0;
     public int Heath = 5;
+    public int Keys = 1;
     public float Speedy = 0;
     bool dragon;
     bool dragon2;
     bool dragon3 = true;
     public GameObject Destination;
     public GameObject Player;
+    public GameObject Door;
+    public GameObject Subdoor;
     public string LoadbyLevl;
     public Text HeathText;
     public Text BoostLeft;
     public float fakespeedy;
+    public bool opendoor;
     
 	// Use this for initialization
 	void Start () {
+        opendoor = false;
+        counter = PlayerPrefs.GetInt("level", counter);
      Speedy =PlayerPrefs.GetFloat("Boost", Speedy);
      Heath  = PlayerPrefs.GetInt("Heath", Heath);
         BoostLeft.text = "Boost" + Speedy;
@@ -39,7 +45,7 @@ public class ThemagicCarpet : MonoBehaviour {
         }
         Speedy = PlayerPrefs.GetFloat("Boost", Speedy);
         Heath  =  PlayerPrefs.GetInt("Heath", Heath);
-        
+        counter = PlayerPrefs.GetInt("level", counter);
         HeathText.text = "Heath" + Heath;
         BoostLeft.text = "Boost" + Speedy;
         transform.Translate(speed * Input.GetAxis("Left") * Time.deltaTime, 0f, speed * Input.GetAxis("Down") * Time.deltaTime);
@@ -53,7 +59,12 @@ public class ThemagicCarpet : MonoBehaviour {
             dragon = true;
             dragon3 = true;
         }
-        if (dragon == true&&Speedy+500>=fakespeedy)
+        if(opendoor==true)
+        {
+            Subdoor.GetComponent<BoxCollider>().enabled = false;
+            Subdoor.GetComponent<MeshRenderer>().enabled = false;
+        }
+        if (dragon == true&&Speedy+1500>=fakespeedy)
         {
             while(dragon3==true)
             {
@@ -87,7 +98,7 @@ public class ThemagicCarpet : MonoBehaviour {
 
         }
 
-        if (Speedy +500 <= fakespeedy || Input.GetKeyDown(KeyCode.A))
+        if (Speedy +1500 <= fakespeedy || Input.GetKeyDown(KeyCode.A))
         {
           
 
@@ -108,18 +119,22 @@ public class ThemagicCarpet : MonoBehaviour {
         }
         if (Input.GetKey("escape"))
         {
+            counter = 0;
             Speedy = 0;
             Heath = 5;
             PlayerPrefs.SetInt("Heath", Heath);
             PlayerPrefs.SetFloat("Boost", Speedy);
+            PlayerPrefs.SetInt("level", counter);
             Application.Quit();
         }
         if (Heath <= 0)
         {
+            counter = 0;
             Speedy = 0;
             Heath = 5;
             PlayerPrefs.SetInt("Heath", Heath);
             PlayerPrefs.SetFloat("Boost", Speedy);
+              PlayerPrefs.SetInt("level", counter);
             SceneManager.LoadScene(LoadbyLevl);
         }
     
@@ -140,7 +155,7 @@ public class ThemagicCarpet : MonoBehaviour {
         }
         if (other.gameObject.tag == "SpeedBoost" )
         {
-            Speedy+=2000;
+            Speedy+=6000;
             PlayerPrefs.SetFloat("Boost", Speedy);
           
         }
@@ -149,11 +164,28 @@ public class ThemagicCarpet : MonoBehaviour {
             Heath++;
             PlayerPrefs.SetInt("Heath", Heath);
         }
+        if (other.gameObject.tag == "Door" && Keys >= 1)
+        {
+            Keys--;
+            Door.GetComponent<BoxCollider>().enabled = false;
+            Door.GetComponent<MeshRenderer>().enabled = false;
+            opendoor = true;
+        }
+        if (other.gameObject.tag == "Levelload")
+        {
+            counter++;
+            PlayerPrefs.SetInt("level", counter);
+        }
       
     }
     public bool GetDragon()
     {
         return dragon;
+    }
+    public int GetCounter()
+    {
+        counter = PlayerPrefs.GetInt("level", counter);
+        return counter;
     }
     
 }

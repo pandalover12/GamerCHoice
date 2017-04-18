@@ -11,15 +11,15 @@ public class Upanddown : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void FixedUpdate () {
         if (transform.position.y > 7)
              up = false;
         if (transform.position.y < 0)
             up = true;
         if(up==false)
-        transform.Translate(0, -0.007f, 0);
+        transform.Translate(0, -0.019f, 0);
         if(up == true)
-            transform.Translate(0, 0.007f, 0);
+            transform.Translate(0, 0.019f, 0);
     }
     void OnTriggerEnter(Collider other)
     {

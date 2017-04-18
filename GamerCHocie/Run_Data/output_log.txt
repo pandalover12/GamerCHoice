@@ -7,30 +7,30 @@ Direct3D:
     VRAM:     3072 MB
     Driver:   21.21.13.7306
 Begin MonoManager ReloadAssembly
-Platform assembly: C:\Users\panda12\Documents\GitHub\GamerCHoice\GamerCHocie\GamerCHoiice\Run_Data\Managed\UnityEngine.dll (this message is harmless)
-Loading C:\Users\panda12\Documents\GitHub\GamerCHoice\GamerCHocie\GamerCHoiice\Run_Data\Managed\UnityEngine.dll into Unity Child Domain
-Platform assembly: C:\Users\panda12\Documents\GitHub\GamerCHoice\GamerCHocie\GamerCHoiice\Run_Data\Managed\Assembly-CSharp.dll (this message is harmless)
-Loading C:\Users\panda12\Documents\GitHub\GamerCHoice\GamerCHocie\GamerCHoiice\Run_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
-Platform assembly: C:\Users\panda12\Documents\GitHub\GamerCHoice\GamerCHocie\GamerCHoiice\Run_Data\Managed\UnityEngine.UI.dll (this message is harmless)
-Loading C:\Users\panda12\Documents\GitHub\GamerCHoice\GamerCHocie\GamerCHoiice\Run_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
-Platform assembly: C:\Users\panda12\Documents\GitHub\GamerCHoice\GamerCHocie\GamerCHoiice\Run_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
-Loading C:\Users\panda12\Documents\GitHub\GamerCHoice\GamerCHocie\GamerCHoiice\Run_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
-Platform assembly: C:\Users\panda12\Documents\GitHub\GamerCHoice\GamerCHocie\GamerCHoiice\Run_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll (this message is harmless)
-Loading C:\Users\panda12\Documents\GitHub\GamerCHoice\GamerCHocie\GamerCHoiice\Run_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll into Unity Child Domain
-- Completed reload, in  0.163 seconds
-Platform assembly: C:\Users\panda12\Documents\GitHub\GamerCHoice\GamerCHocie\GamerCHoiice\Run_Data\Managed\System.Core.dll (this message is harmless)
-Platform assembly: C:\Users\panda12\Documents\GitHub\GamerCHoice\GamerCHocie\GamerCHoiice\Run_Data\Managed\System.dll (this message is harmless)
+Platform assembly: C:\Users\panda12\Documents\GitHub\GamerCHoice\GamerCHocie\Run_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\panda12\Documents\GitHub\GamerCHoice\GamerCHocie\Run_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\panda12\Documents\GitHub\GamerCHoice\GamerCHocie\Run_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\panda12\Documents\GitHub\GamerCHoice\GamerCHocie\Run_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\panda12\Documents\GitHub\GamerCHoice\GamerCHocie\Run_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\panda12\Documents\GitHub\GamerCHoice\GamerCHocie\Run_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\panda12\Documents\GitHub\GamerCHoice\GamerCHocie\Run_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\panda12\Documents\GitHub\GamerCHoice\GamerCHocie\Run_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: C:\Users\panda12\Documents\GitHub\GamerCHoice\GamerCHocie\Run_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll (this message is harmless)
+Loading C:\Users\panda12\Documents\GitHub\GamerCHoice\GamerCHocie\Run_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll into Unity Child Domain
+- Completed reload, in  0.108 seconds
+Platform assembly: C:\Users\panda12\Documents\GitHub\GamerCHoice\GamerCHocie\Run_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\panda12\Documents\GitHub\GamerCHoice\GamerCHocie\Run_Data\Managed\System.dll (this message is harmless)
 desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
-UnloadTime: 1.145283 ms
+UnloadTime: 1.287110 ms
 Setting up 2 worker threads for Enlighten.
-  Thread -> id: 1ed4 -> priority: 1 
-  Thread -> id: 30b0 -> priority: 1 
+  Thread -> id: bf4 -> priority: 1 
+  Thread -> id: 32a4 -> priority: 1 
 Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 7.562268 ms
+UnloadTime: 5.148442 ms
 
-Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 474.
-Total: 0.263506 ms (FindLiveObjects: 0.026864 ms CreateObjectMapping: 0.033185 ms MarkObjects: 0.193580 ms  DeleteObjects: 0.009481 ms)
+Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 614.
+Total: 0.273382 ms (FindLiveObjects: 0.088493 ms CreateObjectMapping: 0.028049 ms MarkObjects: 0.149333 ms  DeleteObjects: 0.007111 ms)
 

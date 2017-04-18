@@ -10,7 +10,7 @@ public class LefttoRight2 : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void FixedUpdate () {
         if (transform.position.x > -35  &&move==true)
             transform.Translate(-0.01f, 0, 0.09f);
         if(transform.position.z<-44&&move==false)

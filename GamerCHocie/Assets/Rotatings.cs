@@ -12,10 +12,10 @@ public class Rotatings : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void FixedUpdate () {
         mewo = cat.GetDragon();
         
-        transform.Rotate(0.19f,0, 0);
+        transform.Rotate(0.60f,0, 0);
 	}
     void OnTriggerEnter(Collider other)
     {

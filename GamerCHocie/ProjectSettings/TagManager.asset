@@ -9,6 +9,8 @@ TagManager:
   - Enemy
   - SpeedBoost
   - HeathBonus
+  - Door
+  - Levelload
   layers:
   - Default
   - TransparentFX
