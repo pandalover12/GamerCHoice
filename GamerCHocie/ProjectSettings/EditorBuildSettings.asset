@@ -11,3 +11,5 @@ EditorBuildSettings:
     path: Assets/Scene/Scene2.unity
   - enabled: 1
     path: Assets/Scene/meow.unity
+  - enabled: 1
+    path: Assets/Scene/fake1.unity

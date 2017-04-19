@@ -12,6 +12,9 @@ TagManager:
   - Door
   - Levelload
   - NewArea
+  - takedamage
+  - indungon
+  - Attack
   layers:
   - Default
   - TransparentFX

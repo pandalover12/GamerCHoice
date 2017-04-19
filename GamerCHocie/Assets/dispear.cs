@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class dispear : MonoBehaviour
 {
+    public bool playerindungon;
+    bool x = false;
 
     // Use this for initialization
     void Start()
     {
-
+        playerindungon = true;
     }
 
     // Update is called once per frame
@@ -22,6 +24,13 @@ public class dispear : MonoBehaviour
         {
             this.GetComponent<MeshRenderer>().enabled = false;
             this.GetComponent<BoxCollider>().enabled = false;
+            playerindungon = x;
+            
         }
+    }
+    public bool player()
+    {
+        
+        return playerindungon;
     }
 }

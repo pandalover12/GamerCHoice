@@ -99,11 +99,16 @@
     <Compile Include="Assets\UpAndDo.cs" />
     <Compile Include="Assets\Upanddown.cs" />
     <Compile Include="Assets\badtext.cs" />
+    <Compile Include="Assets\charley.cs" />
     <Compile Include="Assets\dispear.cs" />
     <Compile Include="Assets\invisable.cs" />
     <Compile Include="Assets\lol.cs" />
+    <Compile Include="Assets\minnion1.cs" />
+    <Compile Include="Assets\minnion15.cs" />
+    <Compile Include="Assets\minnion2.cs" />
     <Compile Include="Assets\opendoor.cs" />
     <Compile Include="Assets\rotatingda.cs" />
+    <Compile Include="Assets\trex.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2015\UnityVS.CSharp.targets" />
 </Project>
