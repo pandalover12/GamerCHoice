@@ -11,6 +11,7 @@ TagManager:
   - HeathBonus
   - Door
   - Levelload
+  - NewArea
   layers:
   - Default
   - TransparentFX

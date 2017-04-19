@@ -18,14 +18,16 @@ public class ThemagicCarpet : MonoBehaviour {
     public GameObject Player;
     public GameObject Door;
     public GameObject Subdoor;
+    public GameObject NewArea1;
     public string LoadbyLevl;
     public Text HeathText;
     public Text BoostLeft;
     public float fakespeedy;
     public bool opendoor;
-    
+    public bool Checkpoint;
 	// Use this for initialization
 	void Start () {
+        Checkpoint = false;
         opendoor = false;
         counter = PlayerPrefs.GetInt("level", counter);
      Speedy =PlayerPrefs.GetFloat("Boost", Speedy);
@@ -112,11 +114,17 @@ public class ThemagicCarpet : MonoBehaviour {
             Heath--;
             PlayerPrefs.SetInt("Heath", Heath);
         }
-        if (Player.transform.position.y < -4 && Heath != 0)
+        if (Player.transform.position.y < -4 && Heath != 0&&Checkpoint==false)
         {
             Player.transform.position = Destination.transform.position;
 
         }
+        if (Player.transform.position.y < -4 && Heath != 0 && Checkpoint == true)
+        {
+            Player.transform.position = NewArea1.transform.position;
+
+        }
+
         if (Input.GetKey("escape"))
         {
             counter = 0;
@@ -175,6 +183,11 @@ public class ThemagicCarpet : MonoBehaviour {
         {
             counter++;
             PlayerPrefs.SetInt("level", counter);
+        }
+        if (other.gameObject.tag == "NewArea")
+        {
+            Player.transform.position = NewArea1.transform.position;
+            Checkpoint = true;
         }
       
     }

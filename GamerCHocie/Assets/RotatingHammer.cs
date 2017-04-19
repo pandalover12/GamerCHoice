@@ -24,14 +24,14 @@ public class RotatingHammer : MonoBehaviour {
         }
      
        
-          if(timer.ElapsedMilliseconds>2800&&left==true)
+          if(timer.ElapsedMilliseconds>2700&&left==true)
         {
             isrotatingtrue = false;
             left = false;
             timer.Reset();
             timer.Start();
         }
-         if(timer.ElapsedMilliseconds > 2800 && left == false)
+         if(timer.ElapsedMilliseconds > 2700 && left == false)
         {
             isrotatingtrue = true;
             left = true;
