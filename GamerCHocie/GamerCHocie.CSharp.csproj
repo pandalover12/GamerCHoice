@@ -75,6 +75,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Bravo.cs" />
     <Compile Include="Assets\Camgirl2.cs" />
     <Compile Include="Assets\FakeROllingball.cs" />
     <Compile Include="Assets\HeathBonus.cs" />
@@ -93,6 +94,8 @@
     <Compile Include="Assets\Scripts\CamGirl.cs" />
     <Compile Include="Assets\Scripts\TextDisplay.cs" />
     <Compile Include="Assets\Scripts\ThemagicCarpet.cs" />
+    <Compile Include="Assets\Secondattack.cs" />
+    <Compile Include="Assets\ThirdAttack.cs" />
     <Compile Include="Assets\Timeer.cs" />
     <Compile Include="Assets\Trickory.cs" />
     <Compile Include="Assets\Trickory2.cs" />
@@ -101,6 +104,7 @@
     <Compile Include="Assets\badtext.cs" />
     <Compile Include="Assets\charley.cs" />
     <Compile Include="Assets\dispear.cs" />
+    <Compile Include="Assets\firstattack.cs" />
     <Compile Include="Assets\invisable.cs" />
     <Compile Include="Assets\lol.cs" />
     <Compile Include="Assets\minnion1.cs" />

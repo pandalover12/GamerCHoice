@@ -17,20 +17,20 @@ Platform assembly: C:\Users\panda12\Documents\GitHub\GamerCHoice\GamerCHocie\Run
 Loading C:\Users\panda12\Documents\GitHub\GamerCHoice\GamerCHocie\Run_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
 Platform assembly: C:\Users\panda12\Documents\GitHub\GamerCHoice\GamerCHocie\Run_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll (this message is harmless)
 Loading C:\Users\panda12\Documents\GitHub\GamerCHoice\GamerCHocie\Run_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll into Unity Child Domain
-- Completed reload, in  0.142 seconds
+- Completed reload, in  0.150 seconds
 Platform assembly: C:\Users\panda12\Documents\GitHub\GamerCHoice\GamerCHocie\Run_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: C:\Users\panda12\Documents\GitHub\GamerCHoice\GamerCHocie\Run_Data\Managed\System.dll (this message is harmless)
 desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
-UnloadTime: 1.442369 ms
+UnloadTime: 1.658073 ms
 Setting up 2 worker threads for Enlighten.
-  Thread -> id: 1974 -> priority: 1 
-  Thread -> id: 2918 -> priority: 1 
+  Thread -> id: 30e8 -> priority: 1 
+  Thread -> id: 2e48 -> priority: 1 
 Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 5.504392 ms
+UnloadTime: 5.364541 ms
 
-Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 783.
-Total: 0.563752 ms (FindLiveObjects: 0.124049 ms CreateObjectMapping: 0.037925 ms MarkObjects: 0.369777 ms  DeleteObjects: 0.031209 ms)
+Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 826.
+Total: 0.326715 ms (FindLiveObjects: 0.077432 ms CreateObjectMapping: 0.040691 ms MarkObjects: 0.199506 ms  DeleteObjects: 0.008691 ms)
 
